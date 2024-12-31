@@ -22,7 +22,7 @@ main:
     
   - title: "CV"
     #url: /cv/
-     url:/files/zakiaCV.pdf    
+     url: /files/zakiaCV.pdf    
 
   #- title: "Guide"
    # url: /markdown/
