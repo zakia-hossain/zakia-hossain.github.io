@@ -24,7 +24,7 @@ author:
   avatar           : "zakia.jpg"
   name             : "Zakia Hossain"
   pronouns         : # example: "she/her"  
-  bio              : "PhD Student"
+  bio              : "PhD Candidate"
   location         : "USA"
   employer         : "University of New Mexico"
   uri              : # URL
@@ -58,7 +58,7 @@ author:
   keybase          : # Username
   instagram        : # Username
   lastfm           : # Username
-  linkedin         : # Username
+  linkedin         : "https://www.linkedin.com/in/zakia-hossain-9698422b9/"
   mastodon         : # URL
   medium           : # URL
   pinterest        : # Username
