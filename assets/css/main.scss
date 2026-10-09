@@ -1,16 +1,22 @@
+
 ---
 ---
 
 /*
- *    Minimal Mistakes Jekyll Theme
+ * Minimal Mistakes Jekyll Theme
  *
- *  - Michael Rose
- *  - mademistakes.com
- *  - https://twitter.com/mmistakes
+ * Michael Rose
+ * mademistakes.com
  *
-*/
+ * Customized for Zakia Hossain
+ * University of New Mexico inspired styling
+ */
 
-@import "vendor/breakpoint/breakpoint"; // media query mixins
+/* ==========================================
+   Original Jekyll Theme Imports
+   ========================================== */
+
+@import "vendor/breakpoint/breakpoint";
 @import "variables";
 @import "mixins";
 @import "vendor/susy/susy";
@@ -39,31 +45,286 @@
 @import "vendor/font-awesome/brands";
 @import "vendor/magnific-popup/magnific-popup";
 @import "print";
-/* UNM-inspired website styling */
 
-/* Cherry red navigation border */
+
+/* ==========================================
+   UNM Academic Website Custom Styling
+   ========================================== */
+
+/* UNM brand colors */
+$unm-cherry: #ba0c2f;
+$unm-cherry-dark: #870820;
+$unm-gray: #63666a;
+$unm-light-gray: #f7f7f7;
+$unm-border: #e5e5e5;
+$unm-text: #333333;
+
+
+/* ==========================================
+   General Website Appearance
+   ========================================== */
+
+body {
+  background-color: #ffffff;
+  color: $unm-text;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+
+/* ==========================================
+   Header and Navigation
+   ========================================== */
+
 .masthead {
-  border-bottom: 4px solid #ba0c2f;
+  background-color: #ffffff;
+  border-bottom: 4px solid $unm-cherry;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
-/* Cherry red page headings */
+.masthead__inner-wrap {
+  padding-top: 0.8em;
+  padding-bottom: 0.8em;
+}
+
+.greedy-nav {
+  background-color: #ffffff;
+}
+
+.greedy-nav a {
+  color: $unm-text;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.greedy-nav a:hover {
+  color: $unm-cherry;
+}
+
+.greedy-nav .visible-links a:before {
+  background-color: $unm-cherry;
+}
+
+
+/* ==========================================
+   Main Page Titles
+   ========================================== */
+
 .page__title {
-  color: #ba0c2f;
+  color: $unm-cherry;
+  font-size: 2em;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 1.5rem;
 }
 
-/* Cherry red links */
+
+/* ==========================================
+   Academic Content
+   ========================================== */
+
+.page__content {
+  line-height: 1.8;
+}
+
+.page__content p {
+  margin-bottom: 1.2em;
+}
+
+.page__content h2 {
+  color: $unm-cherry;
+  font-size: 1.4em;
+  font-weight: 700;
+  border-bottom: 1px solid $unm-border;
+  padding-bottom: 0.4em;
+  margin-top: 2rem;
+}
+
+.page__content h3 {
+  color: $unm-text;
+  font-size: 1.2em;
+  font-weight: 600;
+  margin-top: 1.5rem;
+}
+
+.page__content li {
+  margin-bottom: 0.5em;
+}
+
+.page__content strong {
+  font-weight: 700;
+}
+
+
+/* ==========================================
+   Hyperlinks
+   ========================================== */
+
 .page__content a,
 .archive a,
 .sidebar a {
-  color: #ba0c2f;
+  color: $unm-cherry;
+  text-decoration: none;
+  transition: color 0.2s ease;
 }
 
-/* Navigation hover */
-.greedy-nav a:hover {
-  color: #ba0c2f;
+.page__content a:hover,
+.archive a:hover,
+.sidebar a:hover {
+  color: $unm-cherry-dark;
+  text-decoration: underline;
 }
 
-/* Footer */
+
+/* ==========================================
+   Author Profile Sidebar
+   ========================================== */
+
+.author__avatar img {
+  border: 3px solid $unm-cherry;
+  border-radius: 50%;
+  padding: 3px;
+  background-color: #ffffff;
+}
+
+.author__name {
+  color: $unm-text;
+  font-weight: 700;
+}
+
+.author__bio {
+  color: $unm-gray;
+  line-height: 1.6;
+  margin-top: 0.5em;
+}
+
+.author__urls a {
+  color: $unm-cherry;
+}
+
+.author__urls a:hover {
+  color: $unm-cherry-dark;
+}
+
+
+/* ==========================================
+   Publications and Archive Pages
+   ========================================== */
+
+.archive__item-title {
+  color: $unm-text;
+  font-weight: 600;
+}
+
+.archive__item-title a {
+  color: $unm-cherry;
+}
+
+.archive__item-title a:hover {
+  color: $unm-cherry-dark;
+}
+
+.archive__item-excerpt {
+  color: $unm-gray;
+  line-height: 1.7;
+}
+
+
+/* ==========================================
+   Tables
+   ========================================== */
+
+.page__content table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 1.5em;
+}
+
+.page__content th {
+  background-color: $unm-cherry;
+  color: #ffffff;
+  padding: 0.75em;
+  text-align: left;
+}
+
+.page__content td {
+  padding: 0.75em;
+  border-bottom: 1px solid $unm-border;
+}
+
+.page__content tr:nth-child(even) {
+  background-color: #fafafa;
+}
+
+
+/* ==========================================
+   Blockquotes
+   ========================================== */
+
+.page__content blockquote {
+  border-left: 4px solid $unm-cherry;
+  background-color: $unm-light-gray;
+  padding: 1em 1.2em;
+  margin: 1.5em 0;
+  color: $unm-gray;
+}
+
+
+/* ==========================================
+   Footer
+   ========================================== */
+
 .page__footer {
-  border-top: 3px solid #ba0c2f;
+  background-color: $unm-light-gray;
+  border-top: 3px solid $unm-cherry;
+  color: $unm-gray;
 }
+
+.page__footer a {
+  color: $unm-cherry;
+}
+
+.page__footer a:hover {
+  color: $unm-cherry-dark;
+}
+
+
+/* ==========================================
+   Accessibility and Focus
+   ========================================== */
+
+a:focus-visible {
+  outline: 2px solid $unm-cherry;
+  outline-offset: 3px;
+}
+
+
+/* ==========================================
+   Responsive Design
+   ========================================== */
+
+@media (max-width: 768px) {
+
+  .page__title {
+    font-size: 1.6em;
+  }
+
+  .page__content h2 {
+    font-size: 1.25em;
+  }
+
+  .page__content h3 {
+    font-size: 1.1em;
+  }
+
+  .masthead__inner-wrap {
+    padding-top: 0.6em;
+    padding-bottom: 0.6em;
+  }
+
+  .author__avatar img {
+    border-width: 2px;
+  }
+
+}
+
