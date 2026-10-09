@@ -39,3 +39,31 @@
 @import "vendor/font-awesome/brands";
 @import "vendor/magnific-popup/magnific-popup";
 @import "print";
+/* UNM-inspired website styling */
+
+/* Cherry red navigation border */
+.masthead {
+  border-bottom: 4px solid #ba0c2f;
+}
+
+/* Cherry red page headings */
+.page__title {
+  color: #ba0c2f;
+}
+
+/* Cherry red links */
+.page__content a,
+.archive a,
+.sidebar a {
+  color: #ba0c2f;
+}
+
+/* Navigation hover */
+.greedy-nav a:hover {
+  color: #ba0c2f;
+}
+
+/* Footer */
+.page__footer {
+  border-top: 3px solid #ba0c2f;
+}
